@@ -12,6 +12,6 @@ export const ASSETS = {
     CARD6: new URL('../assets/images/Gitpro_1_card_img6.jpeg', import.meta.url).href,
   },
   AUDIO: {
-    BG_MUSIC: '/music.mp3',
+    BG_MUSIC: new URL('../assets/audio/music.mp3', import.meta.url).href,
   }
 };
