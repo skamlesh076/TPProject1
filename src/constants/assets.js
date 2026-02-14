@@ -1,13 +1,17 @@
+// Local Asset Mapping
 export const ASSETS = {
   IMAGES: {
-    BOUQUET: 'https://images.unsplash.com/photo-1591880911020-f024058d97a3?q=80&w=800&auto=format&fit=crop', // Placeholder bouquet
-    PHOTO1: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=800&auto=format&fit=crop',
-    PHOTO2: 'https://images.unsplash.com/photo-1522673607200-164883eecd0c?q=80&w=800&auto=format&fit=crop',
-    PHOTO3: 'https://images.unsplash.com/photo-1516589174184-c685ca6d2460?q=80&w=800&auto=format&fit=crop',
-    PHOTO4: 'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=800&auto=format&fit=crop',
-    PHOTO5: 'https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=800&auto=format&fit=crop',
+    BOUQUET: new URL('../assets/images/bouquet_placeholder.svg', import.meta.url).href,
+    TENSE_WAITING: new URL('../assets/images/tense_heart_placeholder.svg', import.meta.url).href,
+    PLAIN_BG: 'https://images.unsplash.com/photo-1554034483-04fda0d3507b?q=80&w=1000&auto=format&fit=crop',
+    CARD1: new URL('../assets/images/Gitpro_1_card_img1.jpeg', import.meta.url).href,
+    CARD2: new URL('../assets/images/Gitpro_1_card_img2.jpeg', import.meta.url).href,
+    CARD3: new URL('../assets/images/Gitpro_1_card_img3.jpeg', import.meta.url).href,
+    CARD4: new URL('../assets/images/Gitpro_1_card_img4.jpeg', import.meta.url).href,
+    CARD5: new URL('../assets/images/Gitpro_1_card_img5.jpeg', import.meta.url).href,
+    CARD6: new URL('../assets/images/Gitpro_1_card_img6.jpeg', import.meta.url).href,
   },
   AUDIO: {
-    BG_MUSIC: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Placeholder audio
+    BG_MUSIC: '/music.mp3',
   }
 };

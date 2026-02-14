@@ -1,0 +1,12 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#FFF1F2"/>
+  <path d="M200 300C200 300 100 240 100 150C100 100 150 80 200 130C250 80 300 100 300 150C300 240 200 300 200 300Z" fill="#E11D48"/>
+  <circle cx="170" cy="150" r="10" fill="white"/>
+  <circle cx="230" cy="150" r="10" fill="white"/>
+  <circle cx="170" cy="152" r="4" fill="black"/>
+  <circle cx="230" cy="152" r="4" fill="black"/>
+  <path d="M180 200C190 190 210 190 220 200" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M150 100L170 110" stroke="#374151" stroke-width="2"/>
+  <path d="M250 100L230 110" stroke="#374151" stroke-width="2"/>
+  <text x="140" y="360" font-family="Dancing Script, cursive" font-size="24" fill="#E11D48">Any second now...</text>
+</svg>

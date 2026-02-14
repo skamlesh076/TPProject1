@@ -1,29 +1,174 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-text: #374151;
-  --color-accent-ruby: #e11d48;
-  --color-chocolate: #4e342e;
-  
+  --color-primary-mocha: #5D4037;
+  --color-accent-rose: #FF385C;
+  --color-canvas-cream: #FFFBF0;
+  --color-faded-pink: #FFF0F5;
+  --color-no-grey: #E5E7EB;
+  --color-no-text: #9CA3AF;
+  --color-chocolate: #3E2723;
+  --color-final-ruby: #E11D48;
+
   --font-romantic: "Great Vibes", cursive;
-  --font-body: "Montserrat", sans-serif;
+  --font-body: "Nunito", sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700&display=swap');
 
 :root {
   font-family: var(--font-body);
-  color: var(--color-primary-text);
-  background-color: #fff1f2;
+  color: var(--color-primary-mocha);
+  background-color: var(--color-canvas-cream);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-image: radial-gradient(circle, var(--color-canvas-cream) 0%, var(--color-faded-pink) 100%);
+  overflow-x: hidden;
+  /* Rule 7: 20px padding on edges */
+  padding: 0 20px;
 }
 
 @layer base {
-  h1, h2, h3 {
+
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-romantic);
+    font-weight: 400;
+    /* Rule 7: Clamp fonts */
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    color: var(--color-primary-mocha);
+  }
+
+  p,
+  span,
+  button {
+    font-weight: 600;
+    /* Nunito SemiBold */
+    font-size: 1.1rem;
+  }
+}
+
+/* Shared Button Base (Rule: Soft Rectangle) */
+.premium-button,
+.blob-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #FF385C !important;
+  color: #FFFFFF !important;
+  width: 120px;
+  /* Reduced for mobile side-by-side */
+  height: 50px;
+  border-radius: 12px !important;
+  font-family: var(--font-body);
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 8px 20px rgba(255, 56, 92, 0.4) !important;
+  border: none !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.premium-button {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.premium-button:hover,
+.blob-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 56, 92, 0.5) !important;
+}
+
+/* NO button keeps same style when moving - removed .is-moving modifier */
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.1);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 1s ease-out forwards;
+}
+
+/* Polaroid Card Style */
+.polaroid {
+  background-color: #FFFFFF !important;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Rule 7: Safe Areas at bottom */
+.safe-bottom {
+  padding-bottom: 40px;
+}
+
+/* Floating Hearts utility */
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  animation: float linear infinite;
+  opacity: 0.15;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(110vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.2;
+  }
+
+  85% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
   }
 }
